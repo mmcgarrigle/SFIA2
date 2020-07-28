@@ -5,6 +5,6 @@ import random
 @app.route('/randomphrase', methods=['GET'])
 def beginning():
 
-	list = ['You are a','Hey you','You want to','Sup my','How are','You happy','Can you']
+	list = ['1','2','3','4','5','6','7']
 	
 	return list[random.randrange(6)]
