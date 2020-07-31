@@ -15,6 +15,34 @@ pipeline {
 
         }
 
+        stage('Start Swarm') {
+
+            steps {
+
+                sh './scripts/swarm_setup.sh'
+
+            }
+
+        }
+
+        stage('Deploy Stack') {
+
+            steps {
+
+                sh './scripts/deploy_stack.sh'
+
+            }
+        }
+
+        stage('Clean') {
+
+            steps {
+
+                sh './scripts/clean.sh'
+
+            }
+        }
+
     }
 
 }
