@@ -1,0 +1,6 @@
+---
+    - name: Install Docker-CE
+      hosts: swarm-worker
+      become: true
+      roles: 
+        - docker-installation
