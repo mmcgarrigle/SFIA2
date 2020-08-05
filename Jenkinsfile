@@ -29,7 +29,7 @@ pipeline {
 
             steps {
 
-                sh './scripts/deploy_stack.sh'
+                sh '.SFIA2/scripts/deploy_stack.sh'
 
             }
         }
