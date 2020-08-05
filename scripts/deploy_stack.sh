@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker stack deploy --compose-file docker-compose.yaml Riddleservice
+docker stack deploy --compose-file docker-compose.yml Riddleservice
