@@ -17,5 +17,18 @@
             <button onclick="window.location.reload();">
                 Generate Riddles
             </button>
+            <br>
+            <br>
+            <table>
+            {% for dnd in dnd %}
+                <div class="content">
+                <tr>
+                    <td>{{ Riddles.ID }}</td>
+                    <td>{{ Riddles.riddle }}</td>
+                </tr>
+                </div>
+            {% endfor %}
+            </table>
+
         </body>
     </html>  

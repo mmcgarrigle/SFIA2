@@ -36,7 +36,7 @@ class Riddles(db.Model):
     )
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     response = requests.get('http://service_4:5003/randomriddle')
     print(response)
