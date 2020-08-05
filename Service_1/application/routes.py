@@ -28,12 +28,12 @@ class Riddles(db.Model):
     Riddle = db.Column(db.String(1000), nullable=False)
    
     def __repr__(self):
-    return ''.join(
-        [
-            'ID: ' + str(self.id) + '\n' 
-            'Riddle: ' + self.riddle
-        ]
-    )
+        return ''.join(
+            [
+                'ID: ' + str(self.id) + '\n' 
+                'Riddle: ' + self.riddle
+            ]
+        )
 
 
 @app.route('/', methods=['GET', 'POST'])
