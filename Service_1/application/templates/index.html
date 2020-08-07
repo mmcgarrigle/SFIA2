@@ -19,12 +19,11 @@
             </button>
             <br>
             <br>
+            {% for Riddle in riddles %}
             <table>
-            {% for dnd in dnd %}
-                <div class="content">
                 <tr>
-                    <td>{{ Riddles.ID }}</td>
-                    <td>{{ Riddles.riddle }}</td>
+                    <td>{{ Riddle.ID }}</td>
+                    <td>{{ Riddle.Riddle }}</td>
                 </tr>
                 </div>
             {% endfor %}
