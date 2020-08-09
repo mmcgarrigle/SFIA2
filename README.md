@@ -1,9 +1,10 @@
-#**DevOps Core Practical Project**
+**DevOps Core Practical Project**
 
-###Riddle Generator
-###Michael McGarrigle
+Riddle Generator
 
-##**ReadMe Content**
+Michael McGarrigle
+
+**ReadMe Content**
 
 1. The Brief
 2. Scope
@@ -19,10 +20,10 @@
 11. Improvements To Be Made
 12. Authors
 
-##**The Brief**
+**The Brief**
 The brief set out for the DevOps Core Practical Project was to create an application that generates "Objects" upon a set of predefined rules. There was a requirement to create a service-orientated architecture for the application and a stipulation that the application must consist of at least 4 services that work together.
 
-##**Scope**
+**Scope**
 The minimum set of requirements for the project were:
 
 A Kanban Board with full expansion on tasks needed to complete the project
@@ -75,6 +76,7 @@ NGINX - Used as web server utilising reverse proxy to access site without specif
 
 CI Pipeline
 
+![Imgur](https://i.imgur.com/o7wnwx3.jpg)
 
 The image above details the CI Pipeline implemented for this project.
 Source Code - Written and tested locally while being commited to preestablished GitHub Repo making use of the feature branch model.
