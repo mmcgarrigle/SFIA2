@@ -8,7 +8,7 @@
       - docker-swarm-init
   
   - name: Install Docker-CE on worker
-    hosts: swarm-worker
+    hosts: docker-worker
     become: true
     roles: 
       - docker-installation
