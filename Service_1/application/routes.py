@@ -38,8 +38,8 @@ class riddles(db.Model):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    response = requests.get('http://service_4:5003/randomriddle')
-    # response = requests.get('http://localhost:5003/randomriddle')
+    # response = requests.get('http://service_4:5003/randomriddle')
+    response = requests.get('http://localhost:5003/randomriddle')
     print(response)
     sentence = response.text
     post_data = riddles.query.order_by(riddles.ID.desc()).limit(10).all()

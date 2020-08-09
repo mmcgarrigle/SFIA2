@@ -4,10 +4,15 @@ services:
 
     service_1:
         image: mmcgarrigle/service_1
-        ports:
-            - "5000:5000"
         networks:
             - mmcgarrigle_network
+        environment:
+            - MYSQL_DB_NAME=${MYSQL_DB_NAME}
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_PORT=${MYSQL_PORT}
+            - MYSQL_USER=${MYSQL_USER}
+            - SECRET_KEY=${SECRET_KEY}
         depends_on:
             - service_4
         deploy:
@@ -31,12 +36,33 @@ services:
         image: mmcgarrigle/service_4
         networks:
             - mmcgarrigle_network
+        environments:
+            - MYSQL_DB_NAME=${MYSQL_DB_NAME}
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_PORT=${MYSQL_PORT}
+            - MYSQL_USER=${MYSQL_USER}
+            - SECRET_KEY=${SECRET_KEY}
         depends_on:
             - service_2
             - service_3
         deploy:
             replicas: 3
-        
+
+    nginx:
+        image: mmcgarrigle/nginx
+        ports:
+            - "80:80"
+        networks: 
+            - mmcgarrigle_network
+        depends_on: 
+            - service_4
+            - service_3
+            - service_2
+            - service_1
+        deploy:
+            replicas: 3
+
 networks:
     mmcgarrigle_network:
         driver: overlay
