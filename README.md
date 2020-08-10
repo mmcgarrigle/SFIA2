@@ -21,9 +21,11 @@ Michael McGarrigle
 12. Authors
 
 **The Brief**
+
 The brief set out for the DevOps Core Practical Project was to create an application that generates "Objects" upon a set of predefined rules. There was a requirement to create a service-orientated architecture for the application and a stipulation that the application must consist of at least 4 services that work together.
 
 **Scope**
+
 The minimum set of requirements for the project were:
 
 A Kanban Board with full expansion on tasks needed to complete the project
@@ -34,7 +36,8 @@ The project must be be deployed using containterisation and use an orchestration
 The project must make use of a reverse proxy
 The project must make use of an Ansible Playbook to provision the environment the application needs to run
 
-App Overview
+**App Overview**
+
 I created a riddle generator which returns a random riddle from a list of 49 possible riddles
 
 Service 1 sends a GET request to Service 4.
@@ -46,19 +49,22 @@ Service 1 receives the result from Service 4 to display it on the page and also 
 
 ![Imgur](https://i.imgur.com/rk21u5h.png)
 
-Trello Board
-To keep track of my project and the tasks required for its completion I made us of Trello project management. This was to track the tasks of each sprint and understand the minimum requirements for the MVP. This was broken down to a backlog of tasks which were split into seperate sprints, and user stories to understand the Minimum Viable Product.
+**Trello Board**
+
+To keep track of my project and the tasks required for its completion I made us of Trello project management. This was to track the tasks of each sprint and understand the minimum requirements for the MVP. This was broken down to a backlog of tasks which were split into seperate sprints, and user stories to understand the Minimum Viable Product. I also prioritised the User Stories as per MoSCoW methodology.
 
 
 
 
-Database
-The database in use for the application uses a very simple table, as seen below. This was used to hold the result of previously opened loot boxes.
+**Database**
+
+The database in use for the application uses a very simple table, as seen below. This was used to hold all riddles generated and assign them an ID.
+
+![Imgur](https://i.imgur.com/IADKqId.png)
 
 
+**Technologies Used**
 
-
-Technologies Used
 To keep in line with the brief I made us of the following technologies that were learned during my training:
 
 Trello - Project Management / Kanban Board
@@ -74,7 +80,7 @@ Jenkins - CI Server
 Ansible - Used as the configuration management, making use of ansible playbooks for deployment configuration.
 NGINX - Used as web server utilising reverse proxy to access site without specifying ports.
 
-CI Pipeline
+**CI Pipeline**
 
 ![Imgur](https://i.imgur.com/o7wnwx3.jpg)
 
@@ -87,41 +93,30 @@ NGINX is also implemented at this stage to act as a reverse proxy to allow us to
 This is all deployed on Ubuntu Servers hosted on GCP.
 
 
+**Risk Assessment**
 
-Front-End Design
-The first implementation of the application simply generated a piece of equipment.
+![Imgur](https://i.imgur.com/fbyv6bT.png)
 
+**Difficulties Faced**
 
+**Cataclysmic failure of PC**
 
+Unfortunately, just over halfway through the project, my PC failed. I had to replace both motherboard and CPU which resulted in a large loss of time to work on the project while awaiting delivery. I found that following the videos on MS Teams did help to get me thruogh most of what had to be completed but the biggest difficulty was getting answers to my questions quickly and I feel my nuderstanding of some of the work carried out has suffered due to this. I also put too much pressure on myself to catch up which led to further mistakes.
 
-The second implementation of the application generated the piece of equipment and saved it to the database. The previous pieces of equipment
+**Not pushing to GitHub enough**
 
-
-
-Risk Assessment
-
-
-
-Difficulties Faced
-NGINX Reverse Proxy
-I had encountered an issue with the NGINX Reverse Proxy with a port conflict which was overhanging from previous configuration during development. This tripped me up for a while and through all my troubleshooting I ended up renaming and mispelling a part of my configuration. I had confirmed all parts of the configuration were correct and in place, but that one spelling mistake cost me a couple of hours. This has really enforced that I need to be diligent in spellchecking myself.
-
-Environment Variables
-Figuring out how to pass environment variables into the docker containers was just within reach for a long time but I couldn't quite figure it out. In this case I tunnel visioned on one approach and spent too long on it, where as trying something just a little different would have lead me to the correct answer.
+Also partially due to getting through as much work as possilble, as quickly as possible, I failed to carry out enough pushes to Github. On occassion, this led to me losing work after the failure of my PC thus doubling some of my workload due to my own mistake.
 
 
-Current Issues
-List of opened loot currently goes on forever meaning the page can end up incredibly long. This should be limited by only showing the last 50 results in the DB query.
+**Current Issues**
 
-Future Improvements
-User sign in to track individual users luck.
-Colour each quality of item.
-A board showing each item slot and the best quality item found so far for each slot.
+App is not currently functioning.
+
+**Future Improvements**
+
+Adding more riddles to the dictionary.
+Allowing users to login to track answers.
+Persisting data for answers provided by users.
 
 Author
-Gary Forrow
-
-
-Resources:
-Trello - https://trello.com/b/9hLtft5c/sfia2
-Link to app - http://35.189.124.167
+Michael McGarrigle
