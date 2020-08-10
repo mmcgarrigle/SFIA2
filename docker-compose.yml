@@ -36,7 +36,7 @@ services:
         image: mmcgarrigle/service_4
         networks:
             - mmcgarrigle_network
-        environments:
+        environment:
             - MYSQL_DB_NAME=${MYSQL_DB_NAME}
             - MYSQL_HOST=${MYSQL_HOST}
             - MYSQL_PASSWORD=${MYSQL_PASSWORD}
