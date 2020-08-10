@@ -4,6 +4,11 @@
 
 echo $(docker images)
 
+#Build NGINX
+
+docker build --no-cache -t mmcgarrigle/nginx ./NGINX
+docker push mmcgarrigle/nginx:latest
+
 #Build service_1 image
 
 docker build --no-cache -t mmcgarrigle/service_1 ./Service_1
