@@ -101,7 +101,7 @@ This is all deployed on Ubuntu Servers hosted on GCP.
 
 **Cataclysmic failure of PC**
 
-Unfortunately, just over halfway through the project, my PC failed. I had to replace both motherboard and CPU which resulted in a large loss of time to work on the project while awaiting delivery. I found that following the videos on MS Teams did help to get me thruogh most of what had to be completed but the biggest difficulty was getting answers to my questions quickly and I feel my nuderstanding of some of the work carried out has suffered due to this. I also put too much pressure on myself to catch up which led to further mistakes.
+Unfortunately, just over halfway through the project, my PC failed. I had to replace both motherboard and CPU which resulted in a large loss of time to work on the project while awaiting delivery. I found that following the videos on MS Teams did help to get me through most of what had to be completed but the biggest difficulty was getting answers to my questions quickly and I feel my uderstanding of some of the work carried out has suffered due to this. I also put too much pressure on myself to catch up which led to further mistakes.
 
 **Not pushing to GitHub enough**
 
